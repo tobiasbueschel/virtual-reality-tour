@@ -1,4 +1,5 @@
 ### Project structure
+```
 .
 ├── app
 │   ├── css
@@ -44,3 +45,4 @@
 │   │   └── weather-icons
 │   └── views
 └── dist
+```
