@@ -49,7 +49,7 @@ The project uses the JavaScript Task Runner [Grunt](http://gruntjs.com/). The fo
 ###Contributing
 Feel free to send us a pull request
 
-+ [] host page on [GitHub Pages](https://help.github.com/articles/creating-project-pages-manually/)
++ [ ] host page on [GitHub Pages](https://help.github.com/articles/creating-project-pages-manually/)
 
 
 ###Team
