@@ -2,15 +2,17 @@
 Welcome to the first application that allows you to travel in Virtual Reality using [Google Cardboard](https://www.google.com/get/cardboard/).
 This app has been developed during the [Static Showdown](https://2016.staticshowdown.com/) Hackathon by [Firebase](https://www.firebase.com/).
 
-The idea behind the app is simple. Virtual reality is becoming more accessible and popular among consumers and the developer community is growing daily. However, we realized that Google's popular Cardboard does `not yet` provide developers with an option to easily develop web apps using a JavaScript SDK and subsequently deploying them to mobile devices using [PhoneGap](http://phonegap.com/). Thus, we wanted to create an application that showcases the possibility of creating such a virtual reality application in a browser. One that works seamlessly on different devices and could be deploy as native apps using frameworks such as PhoneGap or Cordova. The result is a simple web app that allows you to travel your favorite routes and explore new cities in virtual reality.
+The idea behind the app is simple. Virtual reality is becoming more accessible and popular among consumers and the developer community is growing daily. However, we realized that Google's popular Cardboard does **not yet** provide developers with an option to easily develop web apps using a JavaScript SDK and subsequently deploying them to mobile devices using [PhoneGap](http://phonegap.com/). Thus, we wanted to create an application that showcases the possibility of creating such a virtual reality application in a browser. One that works seamlessly on different devices and could be deploy as native apps using frameworks such as PhoneGap or Cordova. The result is a simple web app that allows you to travel your favorite routes and explore new cities in virtual reality.
 
-Try out the [Demo](ss16-nibbl.fireaseapp.com) :computer:
+Try out the [Demo :computer:](ss16-nibbl.fireaseapp.com)
 
 
-#### Travel View
+#### VR Travel
+*Ever dreamed about driving down Route 66 or do you just need to drive somewhere and want to familiarize yourself with the route? VR Travel lets you choose where you want to go.*
 ![screenshot](https://github.com/staticshowdown/ss16-nibbl/blob/master/app/img/travel.png)
 
-#### Explore View
+#### VR Explore
+*Go on a virtual reality tour through your favorite cities or explore new destinations that you never had the chance to visit. These are our recommended tours that provide an immersive and rich experience. During your tour you will stumble upon `points of interests` that allow you to learn more about the places that you visit.*
 ![screenshot](https://github.com/staticshowdown/ss16-nibbl/blob/master/app/img/explore.png)
 
 
