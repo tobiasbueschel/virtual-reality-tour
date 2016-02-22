@@ -9,11 +9,14 @@ Try out the [Demo :computer:](ss16-nibbl.fireaseapp.com)
 
 #### VR Travel :round_pushpin:
 *Ever dreamed about driving down Route 66 or do you just need to drive somewhere and want to familiarize yourself with the route? VR Travel lets you choose where you want to go.*
+
 ![screenshot](https://github.com/staticshowdown/ss16-nibbl/blob/master/app/img/travel.png)
 
 #### VR Explore :earth_americas:
 *Go on a virtual reality tour through your favorite cities or explore new destinations that you never had the chance to visit. These are our recommended tours that provide an immersive and rich experience. During your tour you will stumble upon `points of interests` that allow you to learn more about the places that you visit.*
+
 ![screenshot](https://github.com/staticshowdown/ss16-nibbl/blob/master/app/img/explore.png)
+
 
 
 ### Installation Instructions
@@ -43,10 +46,12 @@ The project uses the JavaScript Task Runner [Grunt](http://gruntjs.com/). The fo
 + `grunt ngtemplates` _refreshes the template html file_
 
 
+
 ###Team
 [![Tobias Büschel](https://avatars1.githubusercontent.com/u/13087421?v=3&s=460)](https://github.com/tobiasbueschel) | [![Jia Shern](https://avatars3.githubusercontent.com/u/7147813?v=3&s=460)](https://github.com/saffront) | [![Kimeshan Naidoo](https://avatars1.githubusercontent.com/u/8416897?v=3&s=460)](https://github.com/kimeshan) | [![Ed Mothershaw](https://avatars2.githubusercontent.com/u/15124498?v=3&s=460)](https://github.com/edmothershaw)
 ---|---|---|---
 [Tobias Büschel](https://github.com/tobiasbueschel) | [Jia Shern](https://github.com/saffront) | [Kimeshan Naidoo](https://github.com/kimeshan) | [Ed Mothershaw](https://github.com/edmothershaw)
+
 
 ###References & Technology used
 + [AngularJS](https://angularjs.org/)
@@ -56,6 +61,7 @@ The project uses the JavaScript Task Runner [Grunt](http://gruntjs.com/). The fo
 + [NodeJS](https://nodejs.org/en/)
 + [Grunt](http://gruntjs.com/)
 + [Unsplash](http://unsplash.com/)
+
 
 ###License
 See the [MIT license](https://github.com/staticshowdown/ss16-nibbl/edit/master/LICENSE)
