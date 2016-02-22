@@ -2,6 +2,8 @@
 Welcome to the first application that allows you to travel in Virtual Reality using [Google Cardboard](https://www.google.com/get/cardboard/).
 This app has been developed during the [Static Showdown](https://2016.staticshowdown.com/) Hackathon by [Firebase](https://www.firebase.com/).
 
+The idea behind the app is simple. Virtual reality is becoming more accessible and popular among consumers and the developer community is growing daily. However, we realized that Google's popular Cardboard device does not yet provide developers with an option to easily develop Web Apps using a Cardboard JavaScript SDK and deploy to mobile devices using [PhoneGap](http://phonegap.com/). Thus, we wanted to create an application that showcases the possibility of creating virtual reality applications in a browser that work seamlessly on different devices and could be deploy as native apps using frameworks such as PhoneGap or Cordova. The result is a simple web app that allows you to travel your favorite routes and explore new cities in virtual reality.
+
 Try out the [Demo](ss16-nibbl.firebaseapp.com)
 
 
