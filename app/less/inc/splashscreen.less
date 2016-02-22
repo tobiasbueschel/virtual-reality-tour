@@ -1,0 +1,51 @@
+.splashscreen {
+	background: @m-blue;
+	padding: 20px;
+}
+
+#splashBody {
+	border-radius: 2px;
+	position: absolute;
+	top: 50%;
+	margin-top: -150px;
+	text-align: center;
+	padding: 15px;
+	height: 300px;
+	width: 500px;
+	left: 50%;
+	margin-left: -250px;
+
+	#splashTitle {
+		font-size: 60px;
+		font-style: oblique;
+		color: #fff;
+	}
+
+
+	@media (max-width: @screen-xs-max) {
+		width: ~"calc(100% - 40px)";
+		left: 20px;
+		margin-left: 0;
+		height: 260px;
+		margin-top: -130px;
+
+		#splashTitle {
+			font-size: 40px;
+		}
+	}
+
+	#splashTitle {
+		margin-top: 20px;
+		line-height: 100%;
+		font-weight: 100;
+	}
+
+	#splashLoader {
+		display: block;
+		font-size: 26px;
+		margin-top: 20px;
+	}
+}
+
+
+

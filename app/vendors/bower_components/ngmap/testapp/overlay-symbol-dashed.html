@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="ngMap">
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script src="script-tags-for-development.js"></script>
+</head>
+
+<body>
+  <ng-map zoom="6" center="20.291, 153.027" map-type-id="TERRAIN">
+    <shape name="polyline" id="foo"
+      path="[[22.291, 153.027], [18.291, 153.027]]"
+      stroke-opacity="0",
+      icons="[{
+        icon: {
+          path: 'M 0,-1 0,1',
+          strokeOpacity: 1,
+          scale: 4
+        },
+        offset: '0',
+        repeat: '20px'
+      }]">
+    </shape>
+ </ng-map>
+</body>
+</html>

@@ -1,0 +1,47 @@
+.tooltip-inner {
+    border-radius: 2px;
+    padding: 5px 10px 7px;
+    font-size: 13px;
+}
+
+.tooltip-color(@bg) {
+    .tooltip-inner {
+        background-color: @bg;
+    }
+    
+    &.top .tooltip-arrow {
+        border-top-color: @bg;
+    }
+    &.top-left .tooltip-arrow {
+        border-top-color: @bg;
+    }
+    &.top-right .tooltip-arrow {
+        border-top-color: @bg;
+    }
+    &.right .tooltip-arrow {
+        border-right-color: @bg;
+    }
+    &.left .tooltip-arrow {
+        border-left-color: @bg;
+    }
+    &.bottom .tooltip-arrow {
+        border-bottom-color: @bg;
+    }
+    &.bottom-left .tooltip-arrow {
+        border-bottom-color: @bg;
+    }
+    &.bottom-right .tooltip-arrow {
+        border-bottom-color: @bg;
+    }
+}
+
+.tooltip-red { .tooltip-color(@m-red); }
+.tooltip-purple { .tooltip-color(@m-purple); }
+.tooltip-blue { .tooltip-color(@m-blue); }
+.tooltip-cyan { .tooltip-color(@m-cyan); }
+.tooltip-teal { .tooltip-color(@m-teal); }
+.tooltip-green { .tooltip-color(@m-green); }
+.tooltip-orange { .tooltip-color(@m-orange); }
+.tooltip-brown { .tooltip-color(@m-brown); }
+.tooltip-bluegray { .tooltip-color(@m-bluegray); }
+.tooltip-black { .tooltip-color(@m-black); }

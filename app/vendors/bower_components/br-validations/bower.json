@@ -1,0 +1,30 @@
+{
+  "name": "br-validations",
+  "version": "0.3.0",
+  "description": "A library of validations applicable to several Brazilian data like I.E., CNPJ, CPF and others",
+  "homepage": "http://github.com/the-darc/br-validations",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:the-darc/br-validations.git"
+  },
+  "main": "releases/br-validations.js",
+  "author": [{
+    "name": "Daniel Campos", "email": "darc.tec@gmail.com"
+  }],
+  "keywords": [
+    "validator",
+    "validation",
+    "cpf",
+    "cnpj",
+    "inscrição estadual"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src",
+    "**/*.test.js",
+    "package.json"
+  ]
+}

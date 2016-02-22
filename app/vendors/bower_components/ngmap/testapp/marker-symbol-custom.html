@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="ngMap">
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script src="script-tags-for-development.js"></script>
+</head>
+
+<body>
+  Marker Symbol Custom<br/>
+   This example uses SVG path notation to add a vector-based symbol
+   as the icon for a marker. The resulting icon is a star-shaped symbol
+   with a pale yellow fill and a thick yellow border.
+    <ng-map center="-25.363882,131.044922" zoom="4">
+      <marker position="-25.363882,131.044922"
+        icon="{
+          path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
+          fillColor: 'yellow',
+          fillOpacity: 0.8,
+          scale: 1,
+          strokeColor: 'gold',
+          strokeWeight: 14
+        }" dragglele="true"></marker>
+    </ng-map>
+</body>
+</html>

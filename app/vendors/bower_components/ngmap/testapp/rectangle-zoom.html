@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script src="script-tags-for-development.js"></script>
+<script>
+var app = angular.module('myApp', ['ngMap']);
+app.controller("RectangleZoomCtrl", function(NgMap) {
+  var vm = this;
+  NgMap.getMap().then(function(map) {
+    vm.map = map;
+    vm.map.shapes.foo.setBounds(vm.map.getBounds());
+  });
+
+  vm.zoomChanged= function(event) {
+    vm.map.shapes.foo.setBounds(vm.map.getBounds());
+  }
+});
+</script>
+</head>
+
+<body ng-controller="RectangleZoomCtrl as vm">
+  <ng-map zoom="11"
+    center="33.6803003, -116.173894"
+    map-type-id="TERRAIN"
+    on-zoom_changed="vm.zoomChanged()">
+    <shape name="rectangle" id="foo"
+      stroke-color="#FF0000"
+      stroke-opacity="0.8"
+      stroke-weight="2"
+      fill-color="#FF0000"
+      fill-opacity="0.35">
+    </shape>
+  </ng-map>
+</body>
+</html>

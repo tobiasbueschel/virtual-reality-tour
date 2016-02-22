@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <title>Dynamic ngMap demo</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <script src="script-tags-for-development.js"></script>
+  <script src="scripts/markerclusterer.js"></script>
+  <script src="scripts/markers.js"></script>
+  <script>
+  var app = angular.module('myApp', ['ngMap']);
+
+  app.controller('mapController', function($http, $interval, NgMap) {
+    var vm = this;
+    vm.dynMarkers = [];
+    NgMap.getMap().then(function(map) {
+      for (var i=0; i<1000; i++) {
+        var latLng = new google.maps.LatLng(markers[i].position[0], markers[i].position[1]);
+        vm.dynMarkers.push(new google.maps.Marker({position:latLng}));
+      }
+      vm.markerClusterer = new MarkerClusterer(map, vm.dynMarkers, {});
+    });
+  });
+  </script>
+  <style>
+    map, div[map] {display:block; width:600px; height:400px;}
+  </style>
+</head>
+
+<body>
+  <h1>Marker Cluster</h1>
+  <hr />
+  <div ng-controller="mapController as vm">
+    <ng-map zoom="2" center="[43.6650000, -79.4103000]"></ng-map>
+  </div>
+</body>
+</html>

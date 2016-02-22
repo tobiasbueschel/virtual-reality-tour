@@ -1,0 +1,26 @@
+{
+  "name": "ngmap",
+  "version": "1.16.7",
+  "main": "./build/scripts/ng-map.js",
+  "homepage": "https://github.com/allenhwkim/angularjs-google-maps",
+  "authors": [
+    "Allen Kim <allenhwkim@gmail.com>"
+  ],
+  "description": "The Simplest AngularJs Google Maps V3 Directive Module",
+  "keywords": [
+    "angularjs",
+    "angularjs-directive",
+    "google-maps"
+  ],
+  "license": "MIT",
+  "_release": "1.16.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.16.7",
+    "commit": "79123fe989db68855831fb5fa9c493eb00eb09e7"
+  },
+  "_source": "git://github.com/allenhwkim/angularjs-google-maps.git",
+  "_target": "^1.16.7",
+  "_originalSource": "ngmap",
+  "_direct": true
+}

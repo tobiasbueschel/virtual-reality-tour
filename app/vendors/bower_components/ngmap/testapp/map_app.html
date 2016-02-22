@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <title>GoogleMap-Based App</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <script src="script-tags-for-development.js"></script>
+  <script src="scripts/markerclusterer.js"></script>
+  <script>
+  var app = angular.module('myApp', ['ngMap']);
+
+  app.controller('mapController', function($http, $timeout, StreetView, NgMap) {
+    var vm = this;
+    vm.stores = [];
+    NgMap.getMap().then(function(evtMap) {
+      map = evtMap;
+      vm.map = map;
+      console.log('loading scripts/starbucks.json');
+      $http.get('scripts/starbucks.json').then(function(resp) {
+        console.log('stores', stores);
+        var stores = resp.data;
+        for (var i=0; i<stores.length; i++) {
+          var store = stores[i];
+          store.position = new google.maps.LatLng(store.latitude,store.longitude);
+          store.title = store.name;
+          var marker = new google.maps.Marker(store);
+          vm.stores.push(marker);
+        }
+        console.log('finished loading scripts/starbucks.json', 'vm.stores', vm.stores.length);
+        vm.markerClusterer = new MarkerClusterer(map, vm.stores, {});
+      }, function(err) { console.log('err', err)});
+    });
+  });
+
+  app.directive('fullScreenToggle', function($timeout) {
+    return {
+      controller: 'mapController',
+      link: function(scope, e, a, ctrl) {
+        var fullScreenClick = function() {
+          e.parent().toggleClass('full-screen');
+          e.text( e.parent().hasClass('full-screen') ? 'Exit Full Screen' : 'Full Screen' );
+          google.maps.event.trigger(scope.map, 'resize');
+        };
+        e.on('click', fullScreenClick);
+        $timeout(function() {
+          fullScreenClick();
+        }, 1000);
+      }
+    }
+  });
+
+  </script>
+  <style>
+    html, body {width:100%; height: 100%; margin: 0}
+    div#map-container {width: 600px; height: 400px; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; }
+    div#map-container div.custom-control { z-index: 1; direction: ltr; overflow: hidden; text-align: center; padding: 1px 6px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; border-width: 1px 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-top-color: rgba(0, 0, 0, 0.14902); border-right-color: rgba(0, 0, 0, 0.14902); border-bottom-color: rgba(0, 0, 0, 0.14902); -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; min-width: 41px; background-color: rgb(255, 255, 255); background-clip: padding-box; }
+
+    div#map-container.full-screen {position:absolute; display:block; width:100%; height:100%; top: 0; left: 0}
+    div#map-container div[full-screen-toggle] { cursor: pointer; position: absolute; top: 5px; right: 100px; }
+    ng-map {display:block; width:100%; height:100%;}
+  </style>
+</head>
+
+<body>
+  <h1>GoogleMap-Based App</h1>
+  <hr />
+
+  <div id="map-container" ng-controller="mapController as vm">
+    <ng-map default-style="false" zoom="2" center="[45.518970, -122.672899]">
+    </ng-map>
+    <div full-screen-toggle class="custom-control">Full Screen</div>
+  </div>
+
+</body>
+</html>

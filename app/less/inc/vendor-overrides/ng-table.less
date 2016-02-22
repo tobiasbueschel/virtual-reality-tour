@@ -1,0 +1,109 @@
+.ng-table {
+    th.sortable {
+        cursor: pointer;
+        .user-select(none);
+        
+        &:hover {
+            background-color: #FDFBD3;
+        } 
+    }
+    
+    .form-control {
+        border: 1px solid #E4E4E4;
+        padding: 10px 15px;
+        height: 40px;
+        
+        &:active,
+        &:focus {
+            border-color: #D7D7D7 !important; 
+        }
+    }
+}
+
+.ng-table-pager {
+    padding: 12px 25px 15px;
+    min-height: 101px;
+
+    @media screen and (min-width: @screen-sm-min) {
+        background: #f4f4f4;
+    }
+}
+
+.ng-table-counts {
+    box-shadow: none !important;
+    margin-top: 23px;
+    border: 1px solid #E8E8E8;
+    
+    @media screen and (max-width: @screen-sm-min) {
+        display: none;
+    }
+
+    .active {
+        background: #F0F0F0;
+    }
+}
+
+.ng-table-pagination {
+    @media screen and (max-width: @screen-sm-min) {
+        width: 100%;
+        text-align: center;
+    }
+    
+    & > li {
+        position: relative;
+        
+        &:first-child,
+        &:last-child {
+            &:before {
+                font-family: @font-icon-md;
+                font-size: 22px;
+                position: absolute;
+                left: 16px;
+                top: 5px;
+                z-index: 12;
+            }
+            
+            & > a {
+                font-size: 0px;
+            }
+        }
+        
+        &:first-child {
+            &:before {
+                content: "\f2fa";
+            }
+        }
+        
+        &:last-child {
+            &:before {
+                content: "\f2fb";
+            }
+        }
+    }
+}
+
+.sortable {
+    .ng-table-header {
+        position: relative;
+        
+        &:before {
+            font-family: @font-icon-md;
+            position: absolute;
+            right: 0;
+            top: -2px;
+            font-size: 17px;
+        }
+    }
+    
+    &.sort-desc {
+        .ng-table-header:before {
+            content: "\f1ce";
+        }
+    }
+    
+    &.sort-asc {
+        .ng-table-header:before {
+            content: "\f1cd";
+        }
+    }
+}

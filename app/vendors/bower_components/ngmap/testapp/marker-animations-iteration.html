@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script src="script-tags-for-development.js"></script>
+<script>
+  var app = angular.module('myApp', ['ngMap']);
+  app.controller('MarkerAnimationCtrl', function($timeout, NgMap) {
+
+    var vm=this;
+    NgMap.getMap().then(function(map) {
+      vm.map = map;
+    });
+
+    vm.neighborhoods = [
+      new google.maps.LatLng(52.511467, 13.447179),
+      new google.maps.LatLng(52.549061, 13.422975),
+      new google.maps.LatLng(52.497622, 13.396110),
+      new google.maps.LatLng(52.517683, 13.394393)
+    ];
+
+    vm.toggleBounce = function() {
+      if (this.getAnimation() != null) {
+        this.setAnimation(null);
+      } else {
+        this.setAnimation(google.maps.Animation.BOUNCE);
+      }
+    };
+
+    var iterator=0;
+    vm.addMarker = function() {
+      for (var i=0; i<vm.neighborhoods.length; i++) {
+        $timeout(function() {
+          // add a marker this way does not sync. marker with <marker> tag
+          new google.maps.Marker({
+            position: vm.neighborhoods[iterator++],
+            map: vm.map,
+            draggable: false,
+            animation: google.maps.Animation.DROP
+          });
+        }, i * 200);
+      }
+    }
+  });
+</script>
+</head>
+
+<body>
+  Marker animations with setTimeout()<br/>
+   If you're adding a number of markers, you may want to
+   drop them on the map consecutively rather than all at once.
+   This example shows how to use setTimeout() to space
+   your markers' animation.
+  <style>
+    div[ng-controller] {
+      position: relative;
+    }
+    #panel {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      margin-left: -180px;
+      z-index: 5;
+      background-color: #fff;
+      padding: 5px;
+      border: 1px solid #999;
+    }
+  </style>
+    <div ng-controller="MarkerAnimationCtrl as vm">
+      <div id="panel">
+        <button id="drop" ng-click="vm.addMarker()">Drop Markers</button>
+       </div>
+      <ng-map center="52.520816, 13.410186" zoom="12">
+      </ng-map>
+    </div>
+</body>
+</html>

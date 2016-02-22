@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script src="script-tags-for-development.js"></script>
+<script>
+var app = angular.module('myApp', ['ngMap']);
+app.controller("RectangleEventCtrl", function($compile, NgMap) {
+  var vm = this;
+  vm.ne, vm.sw;
+  NgMap.getMap().then(function(map) {
+    console.log('map', map);
+    vm.map = map;
+  });
+  vm.boundsChanged = function() {
+    vm.ne = this.getBounds().getNorthEast();
+    vm.sw = this.getBounds().getSouthWest();
+    vm.map.showInfoWindow('foo', vm.ne);
+  };
+});
+</script>
+</head>
+
+<body>
+  Rectangle Event<br/>
+  This example adds a user-editable rectangle to the map.
+  When the user changes the bounds of the rectangle,
+  an info window pops up displaying the new bounds.
+  <div ng-controller="RectangleEventCtrl as vm">
+    <ng-map default-style="true" zoom="9" center="44.5452, -78.5389">
+      <shape name="rectangle"
+        editable="true"
+        draggable="true"
+        bounds="[[44.490,-78.649],[44.599,-78.443]]"
+        on-bounds_changed="vm.boundsChanged()">
+      </shape>
+      <info-window id="foo">
+        <div ng-non-bindable>
+          <b>Rectangle moved.</b><br/>
+          New north-east corner: {{vm.ne.lat()}}, {{vm.ne.lng()}}<br/>
+          New south-west corner: {{vm.sw.lat()}}, {{vm.sw.lng()}}
+        </div>
+      </info-window>
+    </ng-map>
+
+    <b>Rectangle moved.</b><br/>
+    New north-east corner: {{vm.ne.lat()}}, {{vm.ne.lng()}}<br/>
+    New south-west corner: {{vm.sw.lat()}}, {{vm.sw.lng()}}
+  </div>
+</body>
+</html>

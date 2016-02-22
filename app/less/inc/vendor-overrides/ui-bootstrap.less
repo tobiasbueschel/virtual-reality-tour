@@ -1,0 +1,186 @@
+.datepicker-color(@color) {
+    .tr-dpnav {
+        th {
+            background: @color;
+        }
+    }
+    
+    .tr-dpday {
+        th {
+            background: darken(@color, 3%);
+        }
+    }
+    
+    .dp-active {
+        background-color: @color;
+    }
+    
+    .dp-actions {
+        .btn-link {
+            color: @color;
+        }
+    }
+}
+
+.date-picker {
+    
+    .dp-inline {
+        .z-depth(1); 
+        display: inline-block;
+    }
+    
+    &:not(.dp-blue):not(.dp-red) {
+        .datepicker-color(@m-teal);
+    }
+    
+    .dropdown-menu {
+        padding: 0;
+        margin: 0;
+    }
+    
+    &.is-opened {
+        .dropdown-menu {
+            .scale(1);
+            .opacity(1);
+        }
+    }
+}
+
+.dp-table {
+    position: relative;
+    z-index: 1;
+    
+    thead {
+        & > tr {
+            th:first-child {
+                padding-left: 15px;
+            }
+            
+             th:last-child {
+                padding-right: 15px;
+            }
+        }
+    }
+    
+    tbody {
+        & > tr {
+            &:first-child > td {
+                padding-top: 15px;
+            }
+            
+            &:last-child > td {
+                padding-bottom: 15px;
+            }
+            
+            td:first-child {
+                padding-left: 15px;
+            }
+            
+            td:last-child {
+                padding-right: 15px;
+            }
+        }
+    }
+    
+    
+}
+
+.btn-dp {
+    background: transparent; 
+    border: 0;
+     
+    .zmdi {
+        font-size: 18px;
+        line-height: 100%;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        line-height: 34px;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.14);
+        }
+    }
+    
+    &[disabled] {
+        color: #CDCDCD;
+        
+        .dp-day-muted {
+            color: #CDCDCD;
+        }
+    }
+}
+
+.btn-dpbody {
+    padding: 13px;
+    font-size: 12px;
+    border-radius: 2px;
+    
+    &:not(.dp-active):not([disabled]) {
+        color: #000;
+    }
+    
+    &:not(.dp-active):not([disabled]):not(.dp-today):hover {
+        background: #F0F0F0;
+    }
+}
+
+.btn-dpday {
+    border-radius: 50%;
+    width: 42px !important;
+    height: 42px;
+}
+
+.tr-dpnav {
+    .btn-dp {
+        color: #fff; 
+        padding: 25px 0 23px;
+    }
+}
+
+.tr-dpday {
+    th {
+        padding: 8px 0 9px; 
+        color: #fff;
+        text-transform: uppercase;
+    }
+}
+
+.dp-active {
+    color: #fff;
+}
+
+.dp-today:not(.dp-active) {
+    background-color: #E2E2E2;
+}
+
+.dp-day-muted {  
+    color: #8B8B8B;
+}
+
+.dp-title {
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.14);
+        border-radius: 2px;
+    }
+}
+
+
+.dp-blue { .datepicker-color(@m-blue); }
+.dp-red { .datepicker-color(@m-red); }
+
+.dp-actions {
+    padding: 10px 20px 20px;
+    text-align: right;
+    
+    .btn-link {
+        text-decoration: none;
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}

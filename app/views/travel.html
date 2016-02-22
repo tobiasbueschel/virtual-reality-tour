@@ -1,0 +1,145 @@
+<div data-ng-controller="travelCtrl as vm">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="card" style="min-height: 200px;">
+                    <form class="form-horizontal ng-pristine ng-valid" role="form">
+                        <!--<div class="card-header">-->
+                            <!--<h2>Horizontal Form <small>Use Bootstrap's predefined grid classes to align labels and groups of form controls in a horizontal layout by adding '.form-horizontal' to the form. Doing so changes '.form-groups' to behave as grid rows, so no need for '.row'.</small></h2>-->
+                        <!--</div>-->
+
+                        <div class="card-body card-padding">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Origin</label>
+                                <div class="col-sm-10">
+                                    <div class="fg-line">
+                                        <input places-auto-complete ng-model="vm.origin" size=40 ng-disabled="vm.drivingMode" type="text" class="form-control input-sm" id="inputEmail3" placeholder="Enter your origin">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">Destination</label>
+                                <div class="col-sm-10">
+
+                                    <div class="fg-line">
+                                        <input places-auto-complete ng-model="vm.destination" size=40 ng-disabled="vm.drivingMode" type="text" class="form-control input-sm" id="inputPassword3" placeholder="Enter your destination">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group m-b-0">
+                                <label for="inputPassword3" class="col-sm-2 control-label">Speed <br> {{ vm.drivingSpeed / 1.609344 | number : 0 }} mph </label>
+                                <div class="col-sm-10" style="margin-top:5px;">
+                                    <div slider class="input-slider" data-is-color="green" ng-model="vm.drivingSpeed" start=1 end=100></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="card" id="travelCard">
+                    <form class="form-horizontal ng-pristine ng-valid" role="form">
+                        <!--<div class="card-header">-->
+                        <!--<h2>Horizontal Form <small>Use Bootstrap's predefined grid classes to align labels and groups of form controls in a horizontal layout by adding '.form-horizontal' to the form. Doing so changes '.form-groups' to behave as grid rows, so no need for '.row'.</small></h2>-->
+                        <!--</div>-->
+
+                        <div class="card-body card-padding">
+
+
+                            <div class="row" style="margin-top: 7px;">
+
+                                <div class="col-md-12 col-sm-6 col-xs-6">
+                                    <div class="toggle-switch m-b-20" data-ts-color="green">
+                                        <label for="ts2" class="ts-label" style="margin-right: 47px;">Driver Mode</label>
+                                        <input id="ts2" type="radio" ng-model="vm.driverMode" ng-value="true" name="inlineRadioOptions" value="option1">
+                                        <label for="ts2" class="ts-helper"></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-6 col-xs-6">
+                                    <div class="toggle-switch" data-ts-color="green">
+                                        <label for="ts1" class="ts-label">Passenger Mode</label>
+                                        <input id="ts1" type="radio" ng-model="vm.driverMode" ng-value="false" name="inlineRadioOptions" value="option2">
+                                        <label for="ts1" class="ts-helper"></label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row" id="tourButtons">
+
+                                <div class="col-xs-6">
+                                    <button class="btn p-t-10 p-b-10 bgm-green btn-block waves-effect" ng-click="vm.drive()">
+                                        {{vm.drivingMode ?  'Stop' : 'Start Tour' }}
+                                    </button>
+                                </div>
+
+                                <div class="col-xs-6">
+                                    <button class="btn p-t-10 p-b-10 bgm-orange btn-block waves-effect" ng-click="vm.startVR()">
+                                        Start VR Tour
+                                    </button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="card">
+                        <div class="card-body card-padding">
+                                    <ng-map default-style="false" zoom="18" tilt="45"
+                                            center="1135 Karamea-Kohaihai Rd, Kahurangi National Park, Tasman">
+                                        <directions
+                                                draggable="true"
+                                                panel="directions-panel"
+                                                origin="{{vm.origin}}"
+                                                on-directions_changed="vm.directionsChanged(evt)"
+                                                destination="{{vm.destination}}">
+                                        </directions>
+                                        <street-view-panorama container="streetview">
+
+                                        </street-view-panorama>
+                                        <marker ng-repeat="pos in vm.markers"
+                                                position="{{[pos.lat(), pos.lng()]}}">
+                                        </marker>
+                                    </ng-map>
+                        </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-12 col-md-6">
+                <div class="card">
+                    <div class="card-body card-padding">
+                            <div id="streetview"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="text-center">
+    <a href="" ng-click="vm.showDirectionsPanel = !vm.showDirectionsPanel">
+        {{vm.showDirectionsPanel ? 'Hide' : 'Show'}} Detailed Directions
+    </a>
+
+    <br style="clear:both" />
+
+    <div class="text-center" id="directions-panel" ng-show="vm.showDirectionsPanel"
+         style="display:inline-block;width:90%">
+    </div>
+</div>
+
+
+</div>

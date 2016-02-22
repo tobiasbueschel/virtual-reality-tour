@@ -1,0 +1,7 @@
+{
+  "name": "angular-farbtastic",
+  "version": "0.0.1",
+  "main": "./angular-farbtastic.js",
+  "dependencies": {
+  }
+}

@@ -1,0 +1,103 @@
+#map1{
+  position: relative;
+  height: 100%;
+  width: 47%;
+  float: left;
+  margin-left: 20px;
+  display:inline-block;
+  margin-top: 20px;
+}
+
+#map2 {
+  position: relative;
+  height: 100%;
+  width: 47%;
+  float: right;
+  margin-right: 20px;
+  display:inline-block;
+  margin-top: 20px;
+}
+
+#rightMap {
+  position: relative;
+  display:inline-block;
+  height: 95vh;
+  width: auto;
+}
+
+#leftMap {
+  position: relative;
+  display:block;
+  height: 95vh;
+  width: auto;
+}
+
+.divider {
+  position:absolute;
+  left:50%;
+  top:10%;
+  bottom:10%;
+  border-right: 6px groove lightgray;
+}
+
+#binocular {
+  min-height: 100%;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  background-color: black !important;
+}
+
+
+
+#glasses-effect {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: auto;;
+  height: 100%;
+  position: relative;
+  margin: 20px 0;
+  border: none;
+  -webkit-border-radius: 50% / 10%;
+  border-radius: 50% / 10%;
+  color: white;
+  text-align: center;
+  text-indent: 0.1em;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background-color: white !important;
+  display: inline-block
+}
+
+#glasses-effect::before {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: absolute;
+  content: "";
+  top: 10%;
+  right: -5%;
+  bottom: 10%;
+  left: -5%;
+  border: none;
+  -webkit-border-radius: 5% / 50%;
+  border-radius: 5% / 50%;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  text-shadow: none;
+  background-color: white !important;
+  display: inline-block
+}
+
+
+html, body, #full {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+
+.full-height {
+  height: 100%;
+}

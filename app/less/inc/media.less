@@ -1,0 +1,73 @@
+.thumbnail {
+	a&:hover,
+	a&:focus,
+	a&.active {
+		border-color: darken(@thumbnail-border, 5%);
+		box-shadow: 0 0 6px #EAEAEA;
+	}
+}
+
+/*
+ * Lightbox  
+ */
+
+.lightbox {
+	.lightbox-item {
+
+		& > img {
+			width: 100%;
+			border-radius: 2px;
+		}
+
+		.hover-pop(rgba(0,0,0,0.1));
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	[data-src] {
+		.clearfix();
+	}
+
+	.lightbox-item:not(.p-item) {
+		position: relative;
+	}
+}
+
+/*
+ * Carousel
+ */
+.carousel {
+
+
+
+
+	.carousel-indicators {
+		bottom: 10px;
+		margin: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		padding: 0 0 6px;
+		background: rgba(0,0,0,0.6);
+
+		li {
+			border-radius: 0;
+			width: 15px;
+			border: 0;
+			background: #fff;
+			height: 3px;
+			margin: 0 2px;
+			.transition(all);
+			.transition-duration(250ms);
+
+			&.active {
+				width: 25px;
+				height: 3px;
+				background: @m-orange;
+			}
+		}
+	}
+}
+

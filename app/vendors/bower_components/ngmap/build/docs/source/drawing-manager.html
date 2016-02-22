@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+  <head>
+    <base href="../">
+    <title>JSDoc: source : drawing-manager.js</title>
+    <link type="text/css" rel="stylesheet" href="css/jsdoc-default.css">
+    <link href="css/prettify-tomorrow.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" type="text/css" rel="stylesheet">
+    <script src="js/prettify.js"></script>
+    <script src="js/angular.min.js"></script>
+  </head>
+  <body ng-app="">
+    <nav>
+      <h2><a href="index.html">Index</a></h2>
+      <ul class="module">
+        <!-- undefined -->
+        <h3>
+          <a href="" ng-click="moduleundefined = !moduleundefined">
+            module: undefined
+          </a>
+          <i ng-cloak="" ng-show="moduleundefined">+</i>
+        </h3>
+        <li id="undefined" ng-hide="moduleundefined">
+          <ul class="group">
+            <h3>
+              <a href="" ng-click="undefinedservice = !undefinedservice">
+                service
+              </a>
+              <i ng-cloak="" ng-show="undefinedservice">+</i>
+            </h3>
+            <ul ng-hide="undefinedservice">
+              <li>
+                <a href="Attr2MapOptions.html">Attr2MapOptions</a>
+              </li><li>
+                <a href="GeoCoder.html">GeoCoder</a>
+              </li><li>
+                <a href="NavigatorGeolocation.html">NavigatorGeolocation</a>
+              </li><li>
+                <a href="StreetView.html">StreetView</a>
+              </li>
+            </ul>
+          </ul><ul class="group">
+            <h3>
+              <a href="" ng-click="undefineddirective = !undefineddirective">
+                directive
+              </a>
+              <i ng-cloak="" ng-show="undefineddirective">+</i>
+            </h3>
+            <ul ng-hide="undefineddirective">
+              <li>
+                <a href="bicycling-layer.html">bicycling-layer</a>
+              </li><li>
+                <a href="custom-control.html">custom-control</a>
+              </li><li>
+                <a href="directions.html">directions</a>
+              </li><li>
+                <a href="drawing-manager.html">drawing-manager</a>
+              </li><li>
+                <a href="dynamic-maps-engine-layer.html">dynamic-maps-engine-layer</a>
+              </li><li>
+                <a href="fusion-tables-layer.html">fusion-tables-layer</a>
+              </li><li>
+                <a href="heatmap-layer.html">heatmap-layer</a>
+              </li><li>
+                <a href="info-window.html">info-window</a>
+              </li><li>
+                <a href="kml-layer.html">kml-layer</a>
+              </li><li>
+                <a href="map-data.html">map-data</a>
+              </li><li>
+                <a href="map-lazy-load.html">map-lazy-load</a>
+              </li><li>
+                <a href="map-type.html">map-type</a>
+              </li><li>
+                <a href="maps-engine-layer.html">maps-engine-layer</a>
+              </li><li>
+                <a href="marker.html">marker</a>
+              </li><li>
+                <a href="overlay-map-type.html">overlay-map-type</a>
+              </li><li>
+                <a href="places-auto-complete.html">places-auto-complete</a>
+              </li><li>
+                <a href="shape.html">shape</a>
+              </li><li>
+                <a href="streetview-panorama.html">streetview-panorama</a>
+              </li><li>
+                <a href="traffic-layer.html">traffic-layer</a>
+              </li><li>
+                <a href="transit-layer.html">transit-layer</a>
+              </li>
+            </ul>
+          </ul><ul class="group">
+            <h3>
+              <a href="" ng-click="undefinedprovider = !undefinedprovider">
+                provider
+              </a>
+              <i ng-cloak="" ng-show="undefinedprovider">+</i>
+            </h3>
+            <ul ng-hide="undefinedprovider">
+              <li>
+                <a href="NgMap.html">NgMap</a>
+              </li>
+            </ul>
+          </ul><ul class="group">
+            <h3>
+              <a href="" ng-click="undefinedfactory = !undefinedfactory">
+                factory
+              </a>
+              <i ng-cloak="" ng-show="undefinedfactory">+</i>
+            </h3>
+            <ul ng-hide="undefinedfactory">
+              <li>
+                <a href="NgMapPool.html">NgMapPool</a>
+              </li>
+            </ul>
+          </ul>
+        </li>
+      </ul><ul class="module">
+        <!-- ngmap -->
+        <h3>
+          <a href="" ng-click="modulengmap = !modulengmap">
+            module: ngmap
+          </a>
+          <i ng-cloak="" ng-show="modulengmap">+</i>
+        </h3>
+        <li id="ngmap" ng-hide="modulengmap">
+          <ul class="group">
+            <h3>
+              <a href="" ng-click="ngmapdirective = !ngmapdirective">
+                directive
+              </a>
+              <i ng-cloak="" ng-show="ngmapdirective">+</i>
+            </h3>
+            <ul ng-hide="ngmapdirective">
+              <li>
+                <a href="ngmap.custom-marker.html">custom-marker</a>
+              </li>
+            </ul>
+          </ul>
+        </li>
+      </ul><ul class="module">
+        <!-- ng_ap -->
+        <h3>
+          <a href="" ng-click="moduleng_ap = !moduleng_ap">
+            module: ngMap
+          </a>
+          <i ng-cloak="" ng-show="moduleng_ap">+</i>
+        </h3>
+        <li id="ngMap" ng-hide="moduleng_ap">
+          <ul class="group">
+            <h3>
+              <a href="" ng-click="ng_apdirective = !ng_apdirective">
+                directive
+              </a>
+              <i ng-cloak="" ng-show="ng_apdirective">+</i>
+            </h3>
+            <ul ng-hide="ng_apdirective">
+              <li>
+                <a href="ngMap.ng-map.html">ng-map</a>
+              </li>
+            </ul>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div id="content" class="page-wrap">
+      <h1 class="title">
+        source : drawing-manager.js
+      </h1>
+      <div id="main" class="big-container">
+        <!-- source code html -->
+        <article>
+          <pre class="prettyprint source linenums"><code>/**
+ * @ngdoc directive
+ * @name drawing-manager
+ * @param Attr2Options {service} convert html attribute to Gogole map api options
+ * @description
+ *   Requires:  map directive
+ *   Restrict To:  Element
+ *
+ * @example
+ * Example:
+ *
+ *  &lt;map zoom="13" center="37.774546, -122.433523" map-type-id="SATELLITE">
+ *    &lt;drawing-manager
+ *      on-overlaycomplete="onMapOverlayCompleted()"
+ *      position="ControlPosition.TOP_CENTER"
+ *      drawingModes="POLYGON,CIRCLE"
+ *      drawingControl="true"
+ *      circleOptions="fillColor: '#FFFF00';fillOpacity: 1;strokeWeight: 5;clickable: false;zIndex: 1;editable: true;" >
+ *    &lt;/drawing-manager>
+ *  &lt;/map>
+ *
+ *  TODO: Add remove button.
+ *  currently, for our solution, we have the shapes/markers in our own
+ *  controller, and we use some css classes to change the shape button
+ *  to a remove button (&lt;div>X&lt;/div>) and have the remove operation in our own controller.
+ */
+(function() {
+  'use strict';
+  angular.module('ngMap').directive('drawingManager', [
+    'Attr2MapOptions', function(Attr2MapOptions) {
+    var parser = Attr2MapOptions;
+    return {
+      restrict: 'E',
+      require: ['?^map','?^ngMap'],
+      link: function(scope, element, attrs, mapController) {
+        mapController = mapController[0]||mapController[1];
+        var filtered = parser.filter(attrs);
+        var options = parser.getOptions(filtered, {scope: scope});
+        var controlOptions = parser.getControlOptions(filtered);
+        var events = parser.getEvents(scope, filtered);
+        /**
+         * set options
+         */
+        var drawingManager = new google.maps.drawing.DrawingManager({
+          drawingMode: options.drawingmode,
+          drawingControl: options.drawingcontrol,
+          drawingControlOptions: controlOptions.drawingControlOptions,
+          circleOptions:options.circleoptions,
+          markerOptions:options.markeroptions,
+          polygonOptions:options.polygonoptions,
+          polylineOptions:options.polylineoptions,
+          rectangleOptions:options.rectangleoptions
+        });
+        //Observers
+        attrs.$observe('drawingControlOptions', function (newValue) {
+          drawingManager.drawingControlOptions = parser.getControlOptions({drawingControlOptions: newValue}).drawingControlOptions;
+          drawingManager.setDrawingMode(null);
+          drawingManager.setMap(mapController.map);
+        });
+        /**
+         * set events
+         */
+        for (var eventName in events) {
+          google.maps.event.addListener(drawingManager, eventName, events[eventName]);
+        }
+        mapController.addObject('mapDrawingManager', drawingManager);
+        element.bind('$destroy', function() {
+          mapController.deleteObject('mapDrawingManager', drawingManager);
+        });
+      }
+    }; // return
+  }]);
+})();
+</code></pre>
+        </article>
+        <!-- index.html -->
+        <!-- class files -->
+      </div>
+      <footer style="clear:both">
+        Documentation generated by
+        <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.2</a>
+        using
+        <a href="https://github.com/allenhwkim/angular-jsdoc">Angular-JSDoc template</a>
+      </footer>
+    </div>
+    <!--%= prettyJson %-->
+    <script>
+      prettyPrint();
+      var lineNo = window.location.hash.match(/#line([0-9]+)$/);
+      lineNo && document.querySelector("ol li:nth-child("+(lineNo[1])+")").scrollIntoView();
+    </script>
+  </body>
+</html>

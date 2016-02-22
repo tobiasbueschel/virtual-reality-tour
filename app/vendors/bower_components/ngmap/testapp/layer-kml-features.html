@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script src="script-tags-for-development.js"></script>
+<script>
+  var app = angular.module('myApp', ['ngMap']);
+  app.controller('LayerKmlFeatureCtrl', function() {
+    var vm = this;
+    vm.showInContextWindow = function(event) {
+      vm.description = event.featureData.description;
+    };
+  });
+</script>
+</head>
+<body>
+  <div ng-controller="LayerKmlFeatureCtrl as vm">
+    <ng-map zoom="12" center="37.06, -95.68">
+      <kml-layer on-click="vm.showInContextWindow()"
+        url="https://kml-samples.googlecode.com/svn/trunk/kml/Placemark/placemark.kml"></kml-layer>
+    </ng-map>
+    {{description}}
+  </div>
+</body>
+</html>

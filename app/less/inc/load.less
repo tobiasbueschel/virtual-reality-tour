@@ -1,0 +1,130 @@
+
+/*
+ * Animation
+ */
+@-webkit-keyframes ball-clip-rotate {
+    0% {
+        .rotate(0deg);
+        
+    }
+    50% {
+        .rotate(180deg);
+    }
+    100% {
+        .rotate(360deg);
+    }
+}
+@-moz-keyframes ball-clip-rotate {
+    0% {
+        .rotate(0deg);
+    }
+    50% {
+        .rotate(180deg);
+    }
+    100% {
+        .rotate(360deg);
+    }
+}
+@-o-keyframes ball-clip-rotate {
+    0% {
+        .rotate(0deg);
+    }
+    50% {
+        .rotate(180deg);
+    }
+    100% {
+        .rotate(360deg);
+    }
+}
+@keyframes ball-clip-rotate {
+    0% {
+        .rotate(0deg);
+    }
+    50% {
+        .rotate(180deg);
+    }
+    100% {
+        .rotate(360deg);
+    }
+}
+
+
+/* Make clicks pass-through */
+#loading-bar,
+#loading-bar-spinner {
+    pointer-events: none;
+    -webkit-pointer-events: none;
+    .transition(linear all);
+    .transition-duration(350ms);
+}
+
+#loading-bar.ng-enter,
+#loading-bar.ng-leave.ng-leave-active,
+#loading-bar-spinner.ng-enter,
+#loading-bar-spinner.ng-leave.ng-leave-active {
+    .opacity(0);
+}
+
+#loading-bar.ng-enter.ng-enter-active,
+#loading-bar.ng-leave,
+#loading-bar-spinner.ng-enter.ng-enter-active,
+#loading-bar-spinner.ng-leave {
+    .opacity(1);
+}
+
+#loading-bar .bar {
+    .transition(width);
+    .transition-duration(350ms);
+    background: rgba(0,0,0,0.15);
+    position: fixed;
+    z-index: 10002;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: @header-height;
+    border-bottom-right-radius: 1px;
+    border-top-right-radius: 1px;
+}
+
+/* Fancy blur effect */
+#loading-bar .peg {
+    position: absolute;
+    width: 70px;
+    right: 0;
+    top: 0;
+    height: 2px;
+    .opacity(0.45);
+    box-shadow: #fff 1px 0 6px 1px;
+    border-radius: 100%;
+    z-index: 99999;
+}
+
+
+#loading-bar-spinner {
+    width: 56px;
+    height: 56px;
+    text-align: center;
+    padding: 14px; 
+    border-radius: 50%;
+    position: fixed;
+    top: 105px;
+    left: 50%;
+    margin-left: -28px;
+    background: #fff;
+    .z-depth(1);
+    
+    .spinner-icon {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        margin: 0;
+        float: left;
+        background: transparent !important;
+        border: 2px solid @m-cyan;
+        border-bottom-color: transparent !important;
+        border-radius: 100%;
+        .animation(ball-clip-rotate .75s linear infinite);
+    }
+    
+    .clearfix();
+}

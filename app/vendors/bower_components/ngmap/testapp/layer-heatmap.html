@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script src="script-tags-for-development.js"></script>
+<script src="taxi-data.js"></script>
+<script>
+  var app = angular.module('myapp', ['ngMap']);
+  app.controller('LayerHeatmapCtrl', function(NgMap) {
+    var heatmap, vm = this;
+    NgMap.getMap().then(function(map) {
+      vm.map = map;
+      heatmap = vm.map.heatmapLayers.foo;
+    });
+
+    vm.toggleHeatmap= function(event) {
+      heatmap.setMap(heatmap.getMap() ? null : vm.map);
+    };
+
+    vm.changeGradient = function() {
+      var gradient = [
+        'rgba(0, 255, 255, 0)',
+        'rgba(0, 255, 255, 1)',
+        'rgba(0, 191, 255, 1)',
+        'rgba(0, 127, 255, 1)',
+        'rgba(0, 63, 255, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(0, 0, 223, 1)',
+        'rgba(0, 0, 191, 1)',
+        'rgba(0, 0, 159, 1)',
+        'rgba(0, 0, 127, 1)',
+        'rgba(63, 0, 91, 1)',
+        'rgba(127, 0, 63, 1)',
+        'rgba(191, 0, 31, 1)',
+        'rgba(255, 0, 0, 1)'
+      ]
+      heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
+    }
+
+    vm.changeRadius = function() {
+      heatmap.set('radius', heatmap.get('radius') ? null : 20);
+    }
+
+    vm.changeOpacity = function() {
+      heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
+    }
+  });
+</script>
+</head>
+<body>
+  <style>
+    div[ng-controller=LayerHeatmapCtrl] {
+      position:relative;
+    }
+    div[ng-controller=LayerHeatmapCtrl] #panel{
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      margin-left: -180px;
+      z-index: 5;
+      background-color: #fff;
+      padding: 5px;
+      border: 1px solid #999;
+    }
+  </style>
+  <div ng-controller="LayerHeatmapCtrl as vm">
+    <div id="panel">
+      <button ng-click="vm.toggleHeatmap()">Toggle Heatmap</button>
+      <button ng-click="vm.changeGradient()">Change gradient</button>
+      <button ng-click="vm.changeRadius()">Change radius</button>
+      <button ng-click="vm.changeOpacity()">Change opacity</button>
+    </div>
+    <ng-map zoom="13" center="37.774546, -122.433523" map-type-id="SATELLITE">
+      <heatmap-layer id="foo" data="taxiData"></heatmap>
+    </ng-map>
+  </div>
+</body>
+</html>

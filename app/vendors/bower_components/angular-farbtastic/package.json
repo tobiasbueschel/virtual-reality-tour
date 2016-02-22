@@ -1,0 +1,13 @@
+{
+    "name": "angular-farbtastic",
+    "version": "0.0.1",
+    "description": "Angular.js implementation of farbtastic javascript color picker.",
+    "main": "./angular-farbtastic.js",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:schartier/angular-farbtastic.git"
+    },
+    "author": "Sebastien Chartier",
+    "license": "GPL v2",
+    "readmeFilename": "README.md"
+}

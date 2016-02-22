@@ -1,0 +1,51 @@
+/*
+ * For header type 1 only
+ * You may remove these if you opt header 2
+ */
+#header {
+    .skin-switch {
+        padding: 15px 0 8px;
+        text-align: center;
+    }
+    
+    .ss-skin {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-block;
+        margin: 2px 5px;
+    }
+}
+
+.ss-skin {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    &:hover {
+        .opacity(0.8);
+    }
+}
+.current-skin(@color) {
+    background-color: @color;
+    
+    .ss-icon { color: @color; }
+    
+    .ha-menu {
+        @media (max-width: @screen-xs-max) {
+            background: @color;
+        }
+    }
+}
+
+[data-current-skin="lightblue"] { .current-skin(@m-lightblue); }
+[data-current-skin="bluegray"] { .current-skin(@m-bluegray); }
+[data-current-skin="blue"] { .current-skin(@m-blue); }
+[data-current-skin="purple"] { .current-skin(@m-purple); }
+[data-current-skin="orange"] { .current-skin(@m-orange); }
+[data-current-skin="cyan"] { .current-skin(@m-cyan); }
+[data-current-skin="green"] { .current-skin(@m-green); }
+[data-current-skin="teal"] { .current-skin(@m-teal); }
+[data-current-skin="pink"] { .current-skin(@m-pink); }

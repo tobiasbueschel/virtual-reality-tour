@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script src="script-tags-for-development.js"></script>
+<script>
+  var app = angular.module('myApp', ['ngMap']);
+  app.controller('MarkerAnimationCtrl', function() {
+    var vm = this;
+    vm.toggleBounce = function() {
+      if (this.getAnimation() != null) {
+        this.setAnimation(null);
+      } else {
+        this.setAnimation(google.maps.Animation.BOUNCE);
+      }
+    }
+  });
+</script>
+</head>
+
+<body>
+  Marker Animations<br/>
+  The following example creates a marker in Stockholm, Sweden
+  using a DROP animation. Clicking on the marker will toggle
+  the animation between a BOUNCE animation and no animation.
+    <div ng-controller="MarkerAnimationCtrl as vm">
+      <ng-map center="59.32522, 18.07002" zoom="13">
+        <marker position="59.327383, 18.06747"
+          on-click="vm.toggleBounce()"
+          animation="DROP"
+          draggable="true"></marker>
+      </ng-map>
+    </div>
+</body>
+</html>

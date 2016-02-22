@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script src="script-tags-for-development.js"></script>
+<script>
+  var app = angular.module('myApp', ['ngMap']);
+  app.controller('EventArgumentsController', function(NgMap) {
+    var vm = this;
+    NgMap.getMap().then(function(map) {
+      vm.map = map;
+    });
+    vm.placeMarker = function(e) {
+      var marker = new google.maps.Marker({position: e.latLng, map: vm.map});
+      vm.map.panTo(e.latLng);
+    }
+  });
+</script>
+</head>
+
+<body>
+    <div ng-controller="EventArgumentsController as vm">
+      Assigning arguments in UI events
+      <br/>
+      Click map to place markers
+      <ng-map zoom="4" center="-25.363882, 131.044922" on-click="vm.placeMarker()">
+      </ng-map>
+    </div>
+</body>
+</html>

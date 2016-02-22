@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script src="script-tags-for-development.js"></script>
+<script>
+  var app = angular.module('myApp', ['ngMap']);
+  app.controller('CircleSimpleCtrl', function() {
+    var vm = this;
+    vm.cities = {
+      chicago: {population:2714856, position: [41.878113, -87.629798]},
+      newyork: {population:8405837, position: [40.714352, -74.005973]},
+      losangeles: {population:3857799, position: [34.052234, -118.243684]},
+      vancouver: {population:603502, position: [49.25, -123.1]},
+    }
+    vm.getRadius = function(num) {
+      return Math.sqrt(num) * 100;
+    }
+  });
+</script>
+</head>
+
+<body ng-controller="CircleSimpleCtrl as vm">
+  <ng-map center="37.09024, -95.712891" zoom="4" mayTypeId="TERRAIN">
+    <shape name="circle" ng-repeat="city in vm.cities" no-watcher="true"
+      stroke-color="#FF0000"
+      stroke-opacity="0.8"
+      stroke-weight="2"
+      fill-color="#FF0000"
+      fill-opacity="0.35"
+      center="{{city.position}}"
+      radius="{{vm.getRadius(city.population)}}">
+    </shape>
+  </ng-map>
+</body>
+</html>

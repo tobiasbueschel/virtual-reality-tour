@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="ngMap">
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script src="script-tags-for-development.js"></script>
+<script>
+angular.module('ngMap').controller('MyCtrl', function() {
+  this.address = "Toronto Canada";
+});
+</script>
+</head>
+
+<body>
+  <div ng-controller="MyCtrl as vm">
+    <ng-map zoom="11" center="{{vm.address}}" style="width:600px; height:400px">
+      <marker position="{{vm.address}}" title="{{address}}"></marker>
+      <marker position="Brampton Canada" title="Brampton Canada"></marker>
+    </ng-map>
+    <br/>Address : <input ng-model="vm.address" />
+  </div>
+</body>
+</html>

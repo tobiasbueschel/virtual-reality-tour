@@ -1,0 +1,29 @@
+{
+  "name": "nouislider-angular",
+  "main": "nouislider.js",
+  "version": "2.3.0",
+  "homepage": "https://github.com/Yankovsky/nouislider-angular#readme",
+  "authors": [
+    "Yankovsky <YankovskyAndrey@gmail.com>"
+  ],
+  "description": "Angular wrapper for nouislider",
+  "keywords": [
+    "nouislider",
+    "slider",
+    "angular",
+    "angularjs"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/*",
+    "!nouislider.js",
+    "!nouislider.min.js"
+  ],
+  "dependencies": {
+    "nouislider": "~8.1.0",
+    "angular": "~1.4.8"
+  },
+  "devDependencies": {
+    "angular-route": "~1.4.8"
+  }
+}

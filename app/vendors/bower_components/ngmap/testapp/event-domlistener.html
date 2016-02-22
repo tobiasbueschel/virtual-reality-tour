@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script src="script-tags-for-development.js"></script>
+<script>
+  var app = angular.module('myApp', ['ngMap']); 
+  app.controller('EventDomListenerController', function($window) {
+    var vm = this;
+    vm.showAlert = function() {
+      $window.alert('DIV clicked');
+    }
+  });
+</script>
+</head>
+
+<body ng-controller="EventDomListenerController as vm">
+  We add a DOM event here to show an alert if the DIV containing the map is clicked.
+  <br/>
+  Click the map to see the alert.
+  <ng-map zoom="4" center="-34.397, 150.644" on-click="vm.showAlert()">
+  </ng-map>
+
+</body>
+</html>
