@@ -7,11 +7,11 @@ The idea behind the app is simple. Virtual reality is becoming more accessible a
 Try out the [Demo :computer:](ss16-nibbl.fireaseapp.com)
 
 
-#### VR Travel
+#### VR Travel :round_pushpin:
 *Ever dreamed about driving down Route 66 or do you just need to drive somewhere and want to familiarize yourself with the route? VR Travel lets you choose where you want to go.*
 ![screenshot](https://github.com/staticshowdown/ss16-nibbl/blob/master/app/img/travel.png)
 
-#### VR Explore
+#### VR Explore :earth_americas:
 *Go on a virtual reality tour through your favorite cities or explore new destinations that you never had the chance to visit. These are our recommended tours that provide an immersive and rich experience. During your tour you will stumble upon `points of interests` that allow you to learn more about the places that you visit.*
 ![screenshot](https://github.com/staticshowdown/ss16-nibbl/blob/master/app/img/explore.png)
 
