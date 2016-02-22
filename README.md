@@ -1,5 +1,6 @@
 # NIBBL VR TOUR
-Welcome to the first application that allows you to travel in Virtual Reality using Google Cardboard.
+Welcome to the first application that allows you to travel in Virtual Reality using [Google Cardboard](https://www.google.com/get/cardboard/).
+This app has been developed during the [Static Showdown](https://2016.staticshowdown.com/) Hackathon by [Firebase](https://www.firebase.com/).
 
 Try out the [Demo](ss16-nibbl.firebaseapp.com)
 
@@ -31,7 +32,7 @@ cd vendors
 $ bower install
 ```
 
-###### Running the application and making changes
+###### (4) Running the application and making changes
 The project uses the JavaScript Task Runner [Grunt](http://gruntjs.com/). The following commands will be usefull:
 
 + `grunt` runs the default task & starts a localhost
