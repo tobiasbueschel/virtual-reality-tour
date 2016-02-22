@@ -34,8 +34,8 @@ $ bower install
 ###### Running the application and making changes
 The project uses the JavaScript Task Runner [Grunt](http://gruntjs.com/). The following commands will be usefull:
 
-`grunt` _runs the default task & starts a localhost*
-`grunt ngtemplates` _refreshes the template html file_
++ `grunt` _runs the default task & starts a localhost
++ `grunt ngtemplates` _refreshes the template html file_
 
 
 ###Team
