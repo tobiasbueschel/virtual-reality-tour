@@ -46,6 +46,11 @@ The project uses the JavaScript Task Runner [Grunt](http://gruntjs.com/). The fo
 + `grunt ngtemplates` _refreshes the template html file_
 
 
+###Contributing
+Feel free to send us a pull request
+
++ [] host page on [GitHub Pages](https://help.github.com/articles/creating-project-pages-manually/)
+
 
 ###Team
 [![Tobias Büschel](https://avatars1.githubusercontent.com/u/13087421?v=3&s=460)](https://github.com/tobiasbueschel) | [![Jia Shern](https://avatars3.githubusercontent.com/u/7147813?v=3&s=460)](https://github.com/saffront) | [![Kimeshan Naidoo](https://avatars1.githubusercontent.com/u/8416897?v=3&s=460)](https://github.com/kimeshan) | [![Ed Mothershaw](https://avatars2.githubusercontent.com/u/15124498?v=3&s=460)](https://github.com/edmothershaw)
