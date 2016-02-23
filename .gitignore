@@ -31,3 +31,5 @@ app/node_modules
 app/vendors/bower_components
 
 dist/
+
+.idea
