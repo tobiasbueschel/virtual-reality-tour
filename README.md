@@ -66,4 +66,4 @@ Feel free to send us a pull request. If you find any bugs please report it on th
 
 
 ###License
-See the [MIT license](https://github.com/staticshowdown/ss16-nibbl/edit/master/LICENSE)
+See the [MIT license](https://github.com/staticshowdown/ss16-nibbl/edit/master/LICENSE).
