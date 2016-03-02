@@ -55,7 +55,7 @@ Feel free to send us a pull request. If you find any bugs please report it on th
 [Tobias Büschel](https://github.com/tobiasbueschel) | [Jia Shern](https://github.com/saffront) | [Kimeshan Naidoo](https://github.com/kimeshan) | [Ed Mothershaw](https://github.com/edmothershaw)
 
 
-###References & Technology used
+###References & Technology used 
 + [AngularJS](https://angularjs.org/)
 + [Material Design Template](http://byrushan.com/projects/ma/1-5-2/)
 + [ng-map](http://ngmap.github.io/#/!street-view_road_trip.html)
