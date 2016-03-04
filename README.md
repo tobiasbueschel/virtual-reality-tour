@@ -4,7 +4,7 @@ This app has been developed during the [2016 Static Showdown](https://2016.stati
 
 The idea behind the app is simple. Virtual reality is becoming more accessible and popular among consumers and the developer community is growing daily. However, we realized that Google's popular Cardboard does **not yet** provide developers with an option to easily develop web apps using a JavaScript SDK and subsequently deploying them to mobile devices using [PhoneGap](http://phonegap.com/). Thus, we wanted to create an application that showcases the possibility of creating such a virtual reality application in a browser. One that works seamlessly on different devices and could be deployed as a native apps using frameworks such as PhoneGap/Cordova. The result is a simple app that allows you to travel your favorite routes and explore new cities in virtual reality.
 
-Try out the [Demo :computer:](https://vrtour.firebaseapp.com/)
+Try out the [demo :computer:](https://vrtour.firebaseapp.com/)
 
 
 #### VR Travel :round_pushpin:
