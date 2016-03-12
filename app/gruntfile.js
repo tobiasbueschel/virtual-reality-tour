@@ -77,6 +77,12 @@ module.exports = function(grunt) {
 
 
     // Default task(s).
-    grunt.registerTask('default', ['less', 'csssplit', 'ngtemplates', 'connect', 'watch']);
+    grunt.registerTask('default', [
+        'less',
+        'csssplit',
+        'ngtemplates',
+        'connect',
+        'watch'
+    ]);
 
 };

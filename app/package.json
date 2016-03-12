@@ -18,6 +18,7 @@
     "supports-color": "^3.1.2"
   },
   "dependencies": {
+    "aframe": "^0.1.2",
     "angular-animate": "^1.4.3",
     "firebase": "^2.3.2",
     "ng-if-bootstrap-grid": "^0.1.0"
