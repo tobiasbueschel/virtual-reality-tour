@@ -4,7 +4,7 @@ This app has been developed during the [2016 Static Showdown](https://2016.stati
 
 The idea behind the app is simple. Virtual reality is becoming more accessible and popular among consumers and the developer community is growing daily. However, we realized that Google's popular Cardboard does **not yet** provide developers with an option to easily develop web apps using a JavaScript SDK and subsequently deploying them to mobile devices using [PhoneGap](http://phonegap.com/). Thus, we wanted to create an application that showcases the possibility of creating such a virtual reality application in a browser. One that works seamlessly on different devices and could be deployed as a native apps using frameworks such as PhoneGap/Cordova. The result is a simple app that allows you to travel your favorite routes and explore new cities in virtual reality.
 
-Try out the [Demo :computer:](https://vrtour.firebaseapp.com/)
+Try out the [demo :computer:](https://vrtour.firebaseapp.com/)
 
 
 #### VR Travel :round_pushpin:
@@ -47,10 +47,7 @@ The project uses the JavaScript Task Runner [Grunt](http://gruntjs.com/). The fo
 
 
 ###Contributing
-Feel free to send us a pull request
-
-+ [ ] host page on [GitHub Pages](https://help.github.com/articles/creating-project-pages-manually/)
-
+Feel free to send us a pull request. If you find any bugs please report it on the [issue page](https://github.com/tobiasbueschel/virtual-reality-tour/issues).
 
 ###Team
 [![Tobias Büschel](https://avatars1.githubusercontent.com/u/13087421?v=3&s=460)](https://github.com/tobiasbueschel) | [![Jia Shern](https://avatars3.githubusercontent.com/u/7147813?v=3&s=460)](https://github.com/saffront) | [![Kimeshan Naidoo](https://avatars1.githubusercontent.com/u/8416897?v=3&s=460)](https://github.com/kimeshan) | [![Ed Mothershaw](https://avatars2.githubusercontent.com/u/15124498?v=3&s=460)](https://github.com/edmothershaw)
@@ -58,7 +55,7 @@ Feel free to send us a pull request
 [Tobias Büschel](https://github.com/tobiasbueschel) | [Jia Shern](https://github.com/saffront) | [Kimeshan Naidoo](https://github.com/kimeshan) | [Ed Mothershaw](https://github.com/edmothershaw)
 
 
-###References & Technology used
+###References & Technology used 
 + [AngularJS](https://angularjs.org/)
 + [Material Design Template](http://byrushan.com/projects/ma/1-5-2/)
 + [ng-map](http://ngmap.github.io/#/!street-view_road_trip.html)
@@ -69,4 +66,4 @@ Feel free to send us a pull request
 
 
 ###License
-See the [MIT license](https://github.com/staticshowdown/ss16-nibbl/edit/master/LICENSE)
+See the [MIT license](https://github.com/staticshowdown/ss16-nibbl/edit/master/LICENSE).
