@@ -8,7 +8,7 @@ Try out the [demo :computer:](https://vrtour.firebaseapp.com/)
 
 
 #### VR Travel :round_pushpin:
-*Ever dreamed about driving down Route 66 or do you just need to drive somewhere and want to familiarize yourself with the route? VR Travel lets you choose where you want to go.*
+*Ever dreamed about driving down Route 66 or do you just need to drive somewhere and want to familiarize yourself with the route? VR Travel lets you choose where you want to go*
 
 ![screenshot](https://github.com/staticshowdown/ss16-nibbl/blob/master/app/img/travel.png)
 
