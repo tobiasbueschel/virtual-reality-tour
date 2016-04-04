@@ -13,7 +13,7 @@ Try out the [demo :computer:](https://vrtour.firebaseapp.com/)
 ![screenshot](https://github.com/tobiasbueschel/virtual-reality-tour/blob/master/travel.png)
 
 #### VR Explore :earth_americas:
-*Go on a virtual reality tour through your favorite cities or explore new destinations that you never had the chance to visit. These are our recommended tours that provide an immersive and rich experience. During your tour you will stumble upon `points of interests` that allow you to learn more about the places that you visit*
+*Go on a virtual reality tour through your favorite cities or explore new destinations that you never had the chance to visit. These are our recommended tours that provide an immersive and rich experience. During your tour you will stumble upon `points of interests` that allow you to learn more about the places that you visit.*
 
 ![screenshot](https://github.com/tobiasbueschel/virtual-reality-tour/blob/master/explore.png)
 
