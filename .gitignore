@@ -33,3 +33,5 @@ app/vendors/bower_components
 dist/
 
 .idea
+
+firebase.json
