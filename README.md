@@ -1,4 +1,6 @@
 # NIBBL VR TOUR
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com/)
+
 Welcome to the first application that allows you to travel in Virtual Reality using [Google Cardboard](https://www.google.com/get/cardboard/).
 This app has been developed during the [2016 Static Showdown](https://2016.staticshowdown.com/) Hackathon by [Firebase](https://www.firebase.com/).
 
