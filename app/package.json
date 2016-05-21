@@ -15,12 +15,14 @@
     "grunt-csssplit": "^0.4.0",
     "has-ansi": "^2.0.0",
     "strip-ansi": "^3.0.0",
-    "supports-color": "^3.1.2"
+    "supports-color": "^3.1.2",
+    "three": "^0.76.1"
   },
   "dependencies": {
     "aframe": "^0.1.2",
     "angular-animate": "^1.4.3",
     "firebase": "^2.3.2",
-    "ng-if-bootstrap-grid": "^0.1.0"
+    "ng-if-bootstrap-grid": "^0.1.0",
+    "three": "^0.76.1"
   }
 }

@@ -138,7 +138,7 @@ nibbl
           serviceScope.vm.map.setHeading(heading); // map heading is different from pov heading
           //set heading for left map
           serviceScope.vm.map2.setHeading(heading+offset);
-          //set pob
+          //set pov
           var pov = {heading:heading,pitch:pitch};
           var pov2 = {heading:heading+offset,pitch:pitch};
           //set left map position & pov
