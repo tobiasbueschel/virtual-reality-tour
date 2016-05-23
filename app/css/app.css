@@ -7488,11 +7488,11 @@ button.close {
 }
 /*!
  * Waves v0.7.5
- * http://fian.my.id/Waves 
- * 
- * Copyright 2014-2016 Alfiana E. Sibuea and other contributors 
- * Released under the MIT license 
- * https://github.com/fians/Waves/blob/master/LICENSE 
+ * http://fian.my.id/Waves
+ *
+ * Copyright 2014-2016 Alfiana E. Sibuea and other contributors
+ * Released under the MIT license
+ * https://github.com/fians/Waves/blob/master/LICENSE
  */
 .waves-effect {
   position: relative;
@@ -7936,7 +7936,7 @@ button.close {
 .di-block {
   display: inline-block !important;
 }
-/* 
+/*
  * Material Background Colors
  */
 .bgm-white {
@@ -8084,7 +8084,7 @@ button.close {
   width: 100% !important;
 }
 /*
- * Border Radius 
+ * Border Radius
  */
 .brd-2 {
   border-radius: 2px;
@@ -11755,7 +11755,7 @@ a.thumbnail.active {
   box-shadow: 0 0 6px #EAEAEA;
 }
 /*
- * Lightbox  
+ * Lightbox
  */
 .lightbox .lightbox-item > img {
   width: 100%;
@@ -14358,6 +14358,18 @@ section.login-content:before {
   height: 95vh;
   width: auto;
 }
+#oval-box {
+  width: 100%;
+  height: auto;
+  background: white;
+  -moz-border-radius: 100px / 50px;
+  -webkit-border-radius: 100px / 178px;
+  border-radius: 694px / 208px;
+  overflow: hidden;
+  z-index: 1000;
+  position: relative;
+}
+
 .divider {
   position: absolute;
   left: 50%;

@@ -1,0 +1,17 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/Cellar/node/6.2.0/bin/node /usr/local/bin/firebase deploy
+[debug] Platform:     darwin
+[debug] Node Version: v6.2.0
+[debug] Time:         Sat May 21 2016 19:44:24 GMT+0100 (BST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/firebase/ss16-nibbl/token?token=XXX 
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/firebase/ss16-nibbl/token?token=XXX 
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'ss16-nibbl'...
+[info] 
+[info] i  deploying hosting
+[info] i  preparing app directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/firebase/ss16-nibbl/uploads/-KIJcUpplMEx_yV6_Uaz?token=XXX&fileCount=4973&message= 

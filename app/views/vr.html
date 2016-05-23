@@ -2,7 +2,8 @@
   <div id="binocular" data-ng-controller="vrCtrl">
 
     <div id="map1">
-      <ng-map id="leftMap" zoom="20" center="37.422800, -122.083794">
+      <div id="oval-box">
+        <ng-map id="leftMap" zoom="20" center="37.422800, -122.083794">
         <marker position="[37.422800, -122.083794]" title="hello" icon="http://res.cloudinary.com/saffront/image/upload/v1456010993/google_sign_so36dg.png" animation="Animation.BOUNCE"></marker>
         <marker position="[40.72, -74.20]" title="marker" icon="http://res.cloudinary.com/saffront/image/upload/v1456010994/gamble_garden_rnqffi.png" animation="Animation.BOUNCE"></marker>
         <marker position="[40.73, -74.19]" title="drag me" icon="http://res.cloudinary.com/saffront/image/upload/v1456010994/hoover_tower_qw3lwg.png" animation="Animation.BOUNCE"></marker>
@@ -11,11 +12,13 @@
         <street-view-panorama container="leftView"
           pov="pov"></street-view-panorama>
       </ng-map>
+    </div>
       <div id="leftView"></div>
     </div>
     <div class="divider"></div>
     <div id="map2">
-      <ng-map id="rightMap" zoom="20" center="37.422800, -122.083794">
+      <div id="oval-box">
+        <ng-map id="rightMap" zoom="20" center="37.422800, -122.083794">
         <marker position="[37.422800, -122.083794]" title="hello" icon="http://res.cloudinary.com/saffront/image/upload/v1456010993/google_sign_so36dg.png" animation="Animation.BOUNCE"></marker>
         <marker position="[40.72, -74.20]" title="marker" icon="http://res.cloudinary.com/saffront/image/upload/v1456010994/gamble_garden_rnqffi.png" animation="Animation.BOUNCE"></marker>
         <marker position="[40.73, -74.19]" title="drag me" icon="http://res.cloudinary.com/saffront/image/upload/v1456010994/hoover_tower_qw3lwg.png" animation="Animation.BOUNCE"></marker>
@@ -24,6 +27,7 @@
         <street-view-panorama container="rightView"
           pov="pov"></street-view-panorama>
       </ng-map>
+      </div>
       <div id="rightView"></div>
     </div>
   </div>
