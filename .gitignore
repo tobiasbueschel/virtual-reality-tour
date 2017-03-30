@@ -29,9 +29,7 @@ app/build/Release
 app/node_modules
 
 app/vendors/bower_components
-
 dist/
-
 .idea
-
 firebase.json
+.DS_Store
