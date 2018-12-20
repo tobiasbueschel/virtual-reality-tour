@@ -11699,10 +11699,6 @@ a.lv-footer:hover {
   padding-top: 0;
 }
 
-#emosNote :hover {
-  animation: pulse 1s;
-}
-
 .chart-edge {
   margin: 20px -8px 0 -10px;
   overflow: hidden;

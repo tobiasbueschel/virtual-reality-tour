@@ -18,7 +18,7 @@
         }
     }
 
-    h2 { 
+    h2 {
         margin: 0;
         line-height: 100%;
         font-size: 17px;
@@ -30,12 +30,12 @@
             color: #AEAEAE;
             line-height: 160%;
         }
-    } 
+    }
 
     &.ch-alt {
         @media screen and (min-width: @screen-sm-min) {
             padding: 20px 23px;
-        } 
+        }
 
         @media screen and (max-width: @screen-sm-max) {
             padding: 18px 18px 28px;
@@ -47,15 +47,15 @@
     }
 
     &[class*="bgm-"] {
-        h2, h2 small { 
+        h2, h2 small {
             color: #fff;
         }
     }
 
     .actions {
-        position: absolute; 
+        position: absolute;
         right: 10px;
-        z-index: 2; 
+        z-index: 2;
         top: 15px;
     }
 
@@ -81,7 +81,7 @@
 
 }
 
-.card-body {  
+.card-body {
     &.card-padding {
         @media screen and (min-width: @screen-sm-min) {
             padding: 23px 25px;
@@ -92,17 +92,11 @@
         }
     }
 
-    &.card-padding-sm { 
+    &.card-padding-sm {
         padding: 15px;
     }
 }
 
 .card-header:not(.ch-alt):not([class*="bgm-"]) + .card-padding {
     padding-top: 0;
-}
-
-#emosNote{
-    :hover{
-        animation: pulse 1s;
-    }
 }

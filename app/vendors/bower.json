@@ -5,7 +5,6 @@
   "main": "",
   "moduleType": [],
   "license": "MIT",
-  "homepage": "https://www.emosurgery.com",
   "ignore": [
     "**/.*",
     "node_modules",
