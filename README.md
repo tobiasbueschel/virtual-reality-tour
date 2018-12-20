@@ -1,5 +1,4 @@
 # NIBBL VR TOUR
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com/)
 
 Welcome to the first application that allows you to travel in Virtual Reality using [Google Cardboard](https://www.google.com/get/cardboard/).
 This app has been developed during the [2016 Static Showdown](https://2016.staticshowdown.com/) Hackathon by [Firebase](https://www.firebase.com/).
@@ -7,7 +6,6 @@ This app has been developed during the [2016 Static Showdown](https://2016.stati
 The idea behind the app is simple. Virtual reality is becoming more accessible and popular among consumers and the developer community is growing daily. However, we realized that Google's popular Cardboard does **not yet** provide developers with an option to easily develop web apps using a JavaScript SDK and subsequently deploying them to mobile devices using [PhoneGap](http://phonegap.com/). Thus, we wanted to create an application that showcases the possibility of creating such a virtual reality application in a browser. One that works seamlessly on different devices and could be deployed as a native apps using frameworks such as PhoneGap/Cordova. The result is a simple app that allows you to travel your favorite routes and explore new cities in virtual reality.
 
 Try out the [demo :computer:](https://vrtour.firebaseapp.com/)
-
 
 #### VR Travel :round_pushpin:
 *Ever dreamed about driving down Route 66 or do you just need to drive somewhere and want to familiarize yourself with the route? VR Travel lets you choose where you want to go.*
@@ -45,15 +43,8 @@ The project uses the JavaScript Task Runner [Grunt](http://gruntjs.com/). The fo
 + `grunt` runs the default task & starts a localhost
 + `grunt ngtemplates` _refreshes the template html file_
 
-
 ### Contributing
 Feel free to send us a pull request. If you find any bugs please report it on the [issue page](https://github.com/tobiasbueschel/virtual-reality-tour/issues).
-
-### Team
-[![Tobias Büschel](https://avatars1.githubusercontent.com/u/13087421?v=3&s=460)](https://github.com/tobiasbueschel) | [![Jia Shern](https://avatars3.githubusercontent.com/u/7147813?v=3&s=460)](https://github.com/saffront) | [![Kimeshan Naidoo](https://avatars1.githubusercontent.com/u/8416897?v=3&s=460)](https://github.com/kimeshan) | [![Ed Mothershaw](https://avatars2.githubusercontent.com/u/15124498?v=3&s=460)](https://github.com/edmothershaw)
----|---|---|---
-[Tobias Büschel](https://github.com/tobiasbueschel) | [Jia Shern](https://github.com/saffront) | [Kimeshan Naidoo](https://github.com/kimeshan) | [Ed Mothershaw](https://github.com/edmothershaw)
-
 
 ### References & Technology used 
 + [AngularJS](https://angularjs.org/)
@@ -64,6 +55,11 @@ Feel free to send us a pull request. If you find any bugs please report it on th
 + [Grunt](http://gruntjs.com/)
 + [Unsplash](http://unsplash.com/)
 
+### Team
+- [Tobias Büschel](https://github.com/tobiasbueschel)]
+- [Jia Shern](https://github.com/saffront)
+- [Kimeshan Naidoo](https://github.com/kimeshan)
+- [Ed Mothershaw](https://github.com/edmothershaw)
 
 ### License
 See the [MIT license](https://github.com/staticshowdown/ss16-nibbl/edit/master/LICENSE).
