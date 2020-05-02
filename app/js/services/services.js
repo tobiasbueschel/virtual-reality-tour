@@ -9,8 +9,6 @@ nibbl
       var serviceScope = this;
       serviceScope.vm = {};
 
-
-
       serviceScope.vm.drivingMode = false; // indicates streetview should be on driving mode
       serviceScope.vm.drivingSpeed = 10; // 100 km per hour
       serviceScope.vm.driverMode = true;
@@ -149,8 +147,6 @@ nibbl
 
       //
       // drive between two points by meter by meter and show it.
-      //
-
       var driveDetailedPaths = function() {
           var meter = Math.floor(
               (parseInt(serviceScope.vm.drivingSpeed, 10) * 1000) / 3600  // how far we drive every second
@@ -272,7 +268,6 @@ nibbl
     //==============================================
     // BOOTSTRAP GROWL
     //==============================================
-
     .service('growlService', function(){
         var gs = {};
         gs.growl = function(message, type, offX, offY) {

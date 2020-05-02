@@ -12,32 +12,6 @@ nibbl.controller('mainCtrl', ['FIREBASE_URL', '$timeout', '$state', '$scope', 'g
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
            angular.element('html').addClass('ismobile');
 
-        //    swal({
-        //        title: "Are you sure?",
-        //        text: "You will not be able to recover this note!",
-        //        type: "warning",
-        //        showCancelButton: true,
-        //        confirmButtonColor: "#DD6B55",
-        //        confirmButtonText: "Yes, delete it!",
-        //        cancelButtonText: "Cancel!",
-        //        allowOutsideClick: true,
-        //        closeOnConfirm: false,
-        //        closeOnCancel: true
-        //    }, function(isConfirm){
-        //        if (isConfirm) {
-        //            swal({
-        //                title: "Deleted!",
-        //                text: "Your note has been deleted.",
-        //                type: "success",
-        //                timer: 2000,
-        //                showConfirmButton: false,
-        //                allowOutsideClick: true
-        //            });
-        //            $timeout(function() {
-        //        }
-        //    });
-        //}; // deleteNote
-
         growlService.growl('You are on a mobile device', 'success' );
 
         }

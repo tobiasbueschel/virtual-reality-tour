@@ -176,30 +176,13 @@ function initPano() {
     function addListeners(panorama, panorama2) {
 
         panorama.addListener('position_changed', function() {
-
             var position = {
                 lat: panorama.position.lat(),
                 lng: panorama.position.lng()
             };
-
             panorama2.setPosition(position);
-
             console.log( panorama2.position.lat() + " " +  panorama2.position.lng() );
-
         });
-
-//        panorama.addListener('pov_changed', function() {
-//
-//            var pov = {
-//                heading: panorama.pov.heading + calculateHeadingOffset(panorama.pov.heading) ,
-//                pitch: panorama.pov.pitch //+ panorama.pov.pitch*0.04
-//            };
-//
-//            panorama2.setPov(pov);
-//
-//            console.log( panorama2.pov.heading + " " +  panorama2.pov.pitch );
-//
-//        });
 
     }
 
@@ -304,13 +287,6 @@ function initPano() {
 
             panorama.setPosition(position);
             panorama2.setPosition(position);
-
-//                var pov = {
-//                    heading: panorama.pov.heading + calculateHeadingOffset(panorama.pov.heading) ,
-//                    pitch: panorama.pov.pitch //+ panorama.pov.pitch*0.04
-//                };
-//
-//                panorama2.setPov(pov);
         }, timeout);
 
     }

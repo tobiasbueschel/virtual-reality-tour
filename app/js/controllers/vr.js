@@ -17,7 +17,6 @@ nibbl.controller('vrCtrl', ['$state', '$scope', 'NgMap', '$timeout','routeServic
             console.log(event.alpha + " " + event.beta);
 
             var pitch = -event.gamma + (event.gamma < 0 ? -90 : 90);//-(event.gamma/2) ;
-
             var heading = event.alpha*(event.gamma < 0 ? -1 : 1) + (event.gamma < 0 ? -90 : 90);
 
             if (pitch > 0 && event.gamma > 180)
